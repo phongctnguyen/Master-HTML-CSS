@@ -15,8 +15,6 @@ Grey dark 2: #777
 Grey dark 3: #999
 
 */
-<<<<<<< HEAD
-=======
 :root {
   --color-primary: #eb2f64;
   --color-primary-light: #FF3366;
@@ -77,4 +75,3 @@ body {
 .hotel-view {
   background-color: #fff;
   flex: 1; }
->>>>>>> c8e512d0e85900a33b3bb289de202ba0ebe7d252
