@@ -255,7 +255,6 @@
 
   &__rating-count {
     font-size: 0.8rem;
-
   }
 }
 
@@ -274,7 +273,7 @@
 
   & span {
     margin-left: 3px;
-    transition: margin-left .2s;
+    transition: margin-left 0.2s;
   }
 
   &:hover {
@@ -285,10 +284,8 @@
     }
   }
 
-  &:hover
-
-  &:focus {
-    outline: none; 
+  &:hover &:focus {
+    outline: none;
     animation: pulsate 1s infinite;
   }
 }
@@ -313,10 +310,8 @@
 /////////////////////////////////////////////
 // PARAGRAPH
 .paragraph:not(:last-of-type) {
-  margin-bottom: 2rem;  
+  margin-bottom: 2rem;
 }
-
-
 
 /////////////////////////////////////////////
 // LIST
@@ -332,7 +327,7 @@
 
   &__item {
     flex: 0 0 50%;
-    margin-bottom: .7rem;
+    margin-bottom: 0.7rem;
   }
 
   &__item::before {
@@ -350,7 +345,6 @@
     -webkit-mask-size: cover;
     mask-image: url(../img/chevron-thin-right.svg);
     mask-size: cover;
-
   }
 }
 
@@ -363,12 +357,11 @@
   display: flex;
   align-items: center;
 
-  &__count {  
+  &__count {
     margin-right: auto;
   }
 
   &__friends {
-
   }
 
   &__photo {
@@ -419,9 +412,8 @@
     font-size: 1.1rem;
     font-weight: 600;
     text-transform: uppercase;
-    margin-bottom: .4rem;
-    
-  } 
+    margin-bottom: 0.4rem;
+  }
 
   &__user-date {
     font-size: 1rem;
@@ -445,5 +437,74 @@
   }
 }
 
+/////////////////////////////////////////////
+// CALL TO ACTION
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
 
+  &__book-now {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
+}
 
+/////////////////////////////////////////////
+// CALL TO ACTION
+.btn {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  & > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s;
+  }
+
+  &__visible {
+    padding: 2rem 7.5rem;
+  }
+
+  &__invisible {
+    position: absolute;
+    left: 0;
+    top: -100%;
+    padding: 2rem 0;
+  }
+
+  &:hover {
+    background-image: linear-gradient(
+      to left,
+      var(--color-primary-light),
+      var(--color-primary-dark)
+    );
+  }
+
+  &:hover &__visible {
+    transform: translateY(100%);
+  }
+
+  &:hover &__invisible {
+    top: 0;
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
+}
